@@ -4,6 +4,12 @@ import { check } from 'meteor/check';
 
 export const Resturants = new Mongo.Collection('resturants');
 
+if (Meteor.isServer) {
+  // This code only runs on the server
+  Meteor.publish('resturants', function resturantsPublication() {
+    return Resturants.find();
+  });
+}
 
 Meteor.methods({
 	'resturant.add'(resturant){
