@@ -1,0 +1,22 @@
+<body>
+<div class="container">
+	<br>
+	<div class="row">
+		{{> loginButtons}}
+	</div>
+	<br><br>
+		{{#if currentUser}}
+			{{> order }}
+			{{ > newResturant }}
+			
+		{{ /if }}
+		<table class="table table-hover ">
+			<tbody>
+				{{ #each resturants }}
+					{{> resturantView}}
+				{{ /each }}
+			</tbody>
+		</table>
+	
+</div>
+</body>

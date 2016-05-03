@@ -1,0 +1,26 @@
+<template name="resturantView">
+
+			 <tr>
+				<td class="col-md-2">
+					{{ name }}
+				</td>
+				<td class="col-md-2">
+					{{ address }}
+				</td>
+				<td class="col-md-1">
+					{{ phone }}
+				</td>
+				{{#if is_owner }}
+				<td class="col-md-1">
+					{{ > editResturant }}
+				</td>
+				<td class="col-md-1">
+					<button class="btn btn-danger btn-xs remove">Remove</button>			
+				</td>
+				{{else}}
+				<td></td>
+				<td></td>
+				{{/if}}
+			</tr>
+			
+</template>
