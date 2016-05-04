@@ -5,6 +5,7 @@ import { Resturants } from '../api/resturants.js'
 
 export const Orders = new Mongo.Collection('orders');
 
+
 Meteor.methods({
   'order.insert'(order) {
  
